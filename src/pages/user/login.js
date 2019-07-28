@@ -7,7 +7,7 @@ import { Image, StyleSheet,View } from 'react-native';
 import { Container, Header, Content, Form, Item, Input, Label,Button, Text  } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import logo from '../../images/logo.png';
-import { getPixel } from '../../utils/Pixel';
+import { px2dp } from '../../utils/px2dp';
 
 export default class Login extends Component {
     state = {
@@ -40,7 +40,7 @@ export default class Login extends Component {
                             <Input placeholder="密码" textContentType="password" />
                         </Item>
                         <Button block style={{ color: '#FF6A6A'}}>
-                            <Text>提交</Text>
+                            <Text>登陆</Text>
                         </Button>
                     </Form>
                     <View style={styles.textBox}>
@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     logo:{
         //flex: 1,
         //justifyContent: "center",
-        marginTop: getPixel(50),
-        height: getPixel(120),
+        marginTop: px2dp(50),
+        height: px2dp(120),
         //backgroundColor:'red',
         alignItems:'center'
     },
@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
         flex: 2,
         flexDirection: 'row',
         justifyContent: "space-between",
-        marginTop: getPixel(10),
+        marginTop: px2dp(10),
     }
 });
